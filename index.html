@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Ultimate form in Bootstrap</title>
+
+		<!-- Bootstrap.css -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<!-- vivid.js icon -->
+		<script src = "https://cdn.jsdelivr.net/npm/vivid-icons@1.0.9"></script>
+
+		<!-- custom CSS stylesheet -->
+		<link rel = "stylesheet" href = "ultimate_form.css">
+	</head>
+	<body>
+		<div class = "container">
+
+			<form role = "form" action = "https://languageplayground.000webhostapp.com/bootstrap_ultimate_form/form_receive.php" method = "post">
+
+				<!-- title of the content -->
+				<div>
+					<h1 class = "content_title">
+						<span><i data-vi = "doc"></i></span>
+						Library Book Borrow
+						<span><i data-vi = "doc"></i></span>
+					</h1>
+				</div>
+
+				<!-- personal information -->
+				<div class = "form-group">
+					<h3>A. Personal Information</h3>
+
+					<!-- username -->
+					<div class = "col-auto">
+						<div class = "input-group mb-4">
+							<div class = "input-group-prepend">
+								<div class = "input-group-text">
+									<i data-vi = "user" data-vi-size = "20"></i>
+								</div>
+							</div>
+							<input type = "text" class = "form-control" name = "username" id = "username" placeholder = "Enter your username" />
+						</div>
+					</div>
+
+					<!-- password -->
+					<div class = "col-auto">
+						<div class = "input-group mb-4">
+							<div class = "input-group-prepend">
+								<div class = "input-group-text">
+									<i data-vi = "lock" data-vi-size = "20"></i>
+								</div>
+							</div>
+							<input type = "password" class = "form-control" name = "password" id = "password" placeholder = "Enter your password" />
+						</div>
+					</div>
+
+					<!-- email -->
+					<div class = "col-auto">
+						<div class = "input-group mb-4">
+							<div class = "input-group-prepend">
+								<div class = "input-group-text">@</div>
+							</div>
+							<input type = "email" class = "form-control" name = "email" id = "email" placeholder = "Enter your email" />
+						</div>
+					</div>
+
+					<!-- key login -->
+					<div class = "col-auto">
+						<div class = "input-group mb-4">
+							<div class = "input-group-prepend">
+								<div class = "input-group-text">
+									<i data-vi = "shield" data-vi-size = "20"></i>
+								</div>
+							</div>
+							<input type = "password" class = "form-control" name = "key_log" id = "key_log" placeholder = "Enter your key login" />
+							<div id = "valid_comment"></div>
+						</div>
+						<small class = "form-text text-muted">The key login is your ID number</small>
+					</div>
+
+					<!-- student or teacher -->
+					<div>
+						<!-- student -->
+						<div class = "custom-control custom-radio custom-control-inline">
+							<input type = "radio" class = "custom-control-input" name = "position" id = "student" value = "student" />
+							<label for = "student" class = "custom-control-label">Student</label>
+						</div>
+
+						<!-- teacher -->
+						<div class = "custom-control custom-radio custom-control-inline">
+							<input type = "radio" class = "custom-control-input" name = "position" id = "teacher" value = "teacher" />
+							<label for = "teacher" class = "custom-control-label">Teacher</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- book choice -->
+				<div class = "form-group">
+					<h3>B. Book choice</h3>
+
+					<!-- number of book -->
+					<div>
+						<label for = "num_book">Number of book you want to choose</label>
+						<input type = "range" min = "1" max = "5" step = "1" class = "custom-range" id = "num_book" name = "num_book" />
+					</div>
+
+					<!-- book select -->
+					<div>
+						<h5>Select your book</h5>
+
+						<select name = "book_select[]" class = "custom-select" multiple row = "5">
+							<option>Learn C The Hard Way</option>
+							<option>C# 6.0 in a Nutshell</option>
+							<option>Learning GraphQL</option>
+							<option>Learn You a Haskell</option>
+							<option>Java 8 in Action</option>
+							<option>Think Julia</option>
+							<option>Black Hat Python</option>
+							<option>Mastering Laravel</option>
+							<option>Mastering Ethereum</option>
+							<option>NLP with TensorFlow</option>
+						</select>
+					</div>
+
+					<!-- pdf or/and paperback -->
+					<div>
+						<h5>Choose the type of book you want to receive</h5>
+						<!-- pdf -->
+						<div class = "custom-control custom-switch">
+							<input type = "checkbox" class = "custom-control-input" id = "pdf" name = "pdf" value = "pdf" />
+							<label for = "pdf" class = "custom-control-label">PDF</label>
+						</div>
+
+						<!-- paperback -->
+						<div class = "custom-control custom-switch">
+							<input type = "checkbox" class = "custom-control-input" id = "paperback" name = "paperback" value = "paperback" />
+							<label for = "paperback" class = "custom-control-label">Paperback</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- date return the book -->
+				<div class = "form-group">
+					<h3>C. Date return</h3>
+					<div class = "row">
+						<!-- date -->
+						<div class = "col-sm-12 col-md-4">
+							<select class = "custom-select" name = "date_select">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+								<option>13</option>
+								<option>14</option>
+								<option>15</option>
+								<option>16</option>
+								<option>17</option>
+								<option>18</option>
+								<option>19</option>
+								<option>20</option>
+								<option>21</option>
+								<option>22</option>
+								<option>23</option>
+								<option>24</option>
+								<option>25</option>
+								<option>26</option>
+								<option>27</option>
+								<option>28</option>
+								<option>29</option>
+								<option>30</option>
+								<option>31</option>
+							</select>
+						</div>
+
+						<!-- month -->
+						<div class = "col-sm-12 col-md-4">
+							<select class = "custom-select" name = "month_select">
+								<option>January</option>
+								<option>Ferbuary</option>
+								<option>March</option>
+								<option>April</option>
+								<option>May</option>
+								<option>June</option>
+								<option>July</option>
+								<option>August</option>
+								<option>September</option>
+								<option>October</option>
+								<option>November</option>
+								<option>December</option>
+							</select>
+						</div>
+
+						<!-- year -->
+						<div class = "col-sm-12 col-md-4">
+							<select class = "custom-select" name = "year_select">
+								<option>2019</option>
+								<option>2020</option>
+								<option>2021</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- verify -->
+				<div class = "form-group">
+					<h3>D. Verify your ID</h3>
+					<small class = "form-text text-muted">Upload the picture of your ID card</small>
+					<label for = "picture">Picture</label>
+					<input type = "file" id = "picture" class = "form-control-file" name = "id_picture" />
+				</div>
+
+				<!-- term agreement -->
+				<div class = "form-group">
+					<div class = "custom-control custom-checkbox">
+						<input type = "checkbox" id = "term" class = "custom-control-input" />
+						<label for = "term" class = "custom-control-label">I agree with the term and policies of the library borrow book</label>
+					</div>
+				</div>
+
+				<!-- submit button -->
+				<div>
+					<button class = "btn btn-primary" id = "submit_btn" disabled>Submit</button>
+				</div>
+			</form>
+		</div>
+
+		<!-- jQuery library -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<!-- popper.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<!-- bootstrap.min.js -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- validate input jQuery file -->
+		<script src = "validate_input.js"></script>
+	</body>
+</html>
